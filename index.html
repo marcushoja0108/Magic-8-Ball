@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life advice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app"></div>
+
+
+    <script>
+
+        // kan legge til: input box som leser av problemet brukeren legger inn og gjengir dette sammen med løsning i en chatbox
+
+        // model
+        const advice = ['I know all.', //welcome message
+                        'Fake it till you make it.',
+                        'Just get over it.',
+                        'Take risks.',
+                        'Stop worrying.',
+                        'Everything happens for a reason.',
+                        'Dont worry! You are young. More mistakes are on the way.',
+                        'Believe you can do it and you will.',
+                        'If it looks stupid, but it works, its smart.',
+                        'You only live once(YOLO).',
+                        'Always say what you are thinking out loud.']
+
+        let shownumber = 0
+        let oldnumber = 0
+
+        // view
+    updateview()
+        function updateview(){
+            let app = document.getElementById('app')
+                
+            app.innerHTML = /*HTML*/`
+            <div class="page">
+                <h1 class="header">Få et bedre liv!</h1>
+                <p class="description">Bruk ballen til å løse dine største og 
+                    minste livsproblemer!</p>
+                    <div class="ball">
+                        <div class="balltext">${advice[shownumber]}</div>
+                    </div>
+                <button onclick="rag()">Solve my problems!</button>
+                
+
+            </div>
+
+            `;
+        }
+
+        // controller
+        function rag(){
+            shownumber = Math.floor(Math.random() * 10 + 1);
+            if (shownumber == oldnumber){
+            shownumber = Math.floor(Math.random() * 10 + 1);
+            console.log(shownumber)
+            }
+            else{
+                oldnumber = shownumber
+            }
+            updateview()
+        }
+    </script>
+</body>
+</html>

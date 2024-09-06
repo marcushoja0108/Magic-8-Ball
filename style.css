@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(215, 172, 255);
+}
+.page{
+    text-align: center;
+    align-content: center;
+}
+.header{
+    user-select: none;
+    color: black;
+}
+.description{
+    user-select: none;
+    background-color: antiquewhite;
+    width:fit-content;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: larger;
+}
+.ball{
+    background-color: black;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    align-content: center;
+    margin: auto;
+}
+.balltext{
+    background-color: white;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    align-content: center;
+    margin: auto;
+    padding: 5px;
+    user-select: none;
+}
+button{
+    margin-top: 20px;
+    height: 40px;
+    border-radius: 15%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    cursor: pointer;
+}
